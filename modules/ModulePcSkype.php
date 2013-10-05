@@ -7,7 +7,7 @@
  *
  * @package   PcSkype
  * @author    Christoph Erdmann <info@pluspunkt-coding.de>
- * @license   GNU/GPL
+ * @license   CC BY-SA 3.0 DE
  * @copyright pluspunkt coding 2013
  */
 
