@@ -269,4 +269,4 @@ $GLOBALS['TL_HOOKS']['replaceInsertTags'][] = array('PcSkype', 'generateInsertta
 /**
  * JAVASCRIPT
  */
-$GLOBALS['TL_JAVASCRIPT'][] = 'http://cdn.dev.skype.com/uri/skype-uri.js';
+$GLOBALS['TL_JAVASCRIPT'][] = 'http://www.skypeassets.com/i/scom/js/skype-uri.js';

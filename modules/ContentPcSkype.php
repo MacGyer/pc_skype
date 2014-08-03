@@ -65,7 +65,7 @@ class ContentPcSkype extends ContentElement
     <!--
 		Skype.ui({
 			"name":				"'.$this->pc_skype_action.'",
-			"element":			"pc_skype_'.$uniqueId.'",
+			"element":			"pc_skype_SkypeButton_'.$uniqueId.'",
 			"participants":		['.$this->PcSkype->prepareParticipants($this->pc_skype_participants).'],
 			"listParticipants":	"'.(($this->pc_skype_listparticipants) ? 'true' : 'false').'",
             '.(($this->pc_skype_topic) ? '"topic": "'.$this->pc_skype_topic.'",' : '').'

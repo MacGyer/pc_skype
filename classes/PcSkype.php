@@ -20,7 +20,8 @@ class PcSkype
      */    
     public function createUniqueId()
     {
-        return substr(sha1(uniqid()), 9, 15);
+        $strUID = substr(sha1(uniqid()), 9, 15);
+		return $strUID;
     }
     
     /**
@@ -81,7 +82,7 @@ class PcSkype
     public function generateInserttag($strTag)
     {
         $arrSplit = explode('::', $strTag);
- 
+		
         if ($arrSplit[0] == 'pc_skype_call')
         {
             return $this->generateInserttagOutput('call', $arrSplit[1]);
@@ -111,19 +112,20 @@ class PcSkype
             return false;
         }
         
-        $uniqueId = $this->createUniqueId();
+        $strUniqueId = $this->createUniqueId();
         $strOutput = 
 '
-<div id="pc_skype_'.$uniqueId.'"></div>
+<div id="pc_skype_SkypeButton_'.$strUniqueId.'">
 <script type="text/javascript">
     <!--
 		Skype.ui({
 			"name":				"'.$strAction.'",
-			"element":			"pc_skype_'.$uniqueId.'",
+			"element":			"pc_skype_SkypeButton_'.$strUniqueId.'",
 			"participants":		["'.$strParticipant.'"],
 		});
 	-->
 </script>
+</div>
 ';
         return $strOutput;
     }
